@@ -72,18 +72,19 @@ export default {
 .site-header {
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 9999;
   background: linear-gradient(to bottom, #fff8e1, #f5e8c7);
   border-bottom: 4px solid #c00;
   text-align: center;
   padding: 20px 0;
   transition: all 0.3s ease;
+  width: 100%;
 }
 
 .site-header.scrolled {
-  background: linear-gradient(to bottom, rgba(255, 248, 225, 0.95), rgba(245, 232, 199, 0.95));
-  backdrop-filter: blur(10px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to bottom, rgba(255, 248, 225, 0.92), rgba(245, 232, 199, 0.92));
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 .top-bar {
