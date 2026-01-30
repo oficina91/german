@@ -90,15 +90,14 @@
     <div class="video-section">
       <h2 class="section-title centered">Conoce más sobre mi propuesta</h2>
       <div class="video-container">
-        <iframe 
-          width="100%" 
-          height="450" 
-          src="https://www.youtube-nocookie.com/embed/OdnQZFKPcas?start=3" 
-          title="Video de campaña" 
-          frameborder="0" 
+        <iframe
+          width="100%"
+          height="450"
+          src="https://www.youtube.com/embed/OdnQZFKPcas?start=3"
+          title="Video de campaña"
+          frameborder="0"
           referrerpolicy="strict-origin-when-cross-origin"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen>
         </iframe>
       </div>
