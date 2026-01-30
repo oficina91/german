@@ -56,7 +56,7 @@
           <img src="/img/German_Ricaurte-2.png" alt="Germán Ricaurte" class="feature-image">
         </div>
         <div class="section-text">
-          <img src="/img/logo.png" class="feature-image-formula">
+          <img src="/img/Logo.png" class="feature-image-formula">
           <h3 class="formula-subtitle">¿Quieres saber cuál es mi fórmula? </h3>
           <p class="formula-question">Averígualo dándole click al botón de abajo.</p>
           <router-link to="/quien-soy" class="cta-button">Click aquí</router-link>
