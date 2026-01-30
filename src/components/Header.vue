@@ -1,5 +1,5 @@
 <template>
-  <header class="site-header">
+  <header class="site-header" :class="{ 'scrolled': isScrolled }">
     <div class="top-bar">
       <div class="logo-section">
         <h1 class="name">Germán Ricaurte</h1>
@@ -47,16 +47,43 @@
   </header>
 </template>
 
-<script setup>
-// No necesita lógica por ahora
+<script>
+export default {
+  data() {
+    return {
+      isScrolled: false
+    }
+  },
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  beforeUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  },
+  methods: {
+    handleScroll() {
+      this.isScrolled = window.scrollY > 50;
+    }
+  }
+}
 </script>
 
 <style scoped>
 .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   background: linear-gradient(to bottom, #fff8e1, #f5e8c7);
   border-bottom: 4px solid #c00;
   text-align: center;
   padding: 20px 0;
+  transition: all 0.3s ease;
+}
+
+.site-header.scrolled {
+  background: linear-gradient(to bottom, rgba(255, 248, 225, 0.95), rgba(245, 232, 199, 0.95));
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .top-bar {
