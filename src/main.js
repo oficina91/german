@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
-import { Quasar, QVideo } from 'quasar'
+import { Quasar } from 'quasar'
 import '@quasar/extras/material-icons/material-icons.css'
 import 'quasar/dist/quasar.css'
 import App from './App.vue'
@@ -8,9 +8,5 @@ import './assets/styles.css'
 
 createApp(App)
   .use(router)
-  .use(Quasar, {
-    components: {
-      QVideo
-    }
-  })
+  .use(Quasar)
   .mount('#app')

@@ -90,10 +90,14 @@
     <div class="video-section">
       <h2 class="section-title centered">Conoce más sobre mi propuesta</h2>
       <div class="video-container">
-        <q-video
-          :ratio="16/9"
+        <iframe
+          width="100%"
+          height="100%"
           src="https://www.youtube.com/embed/OdnQZFKPcas?rel=0"
-        />
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
       </div>
     </div>
 
@@ -469,6 +473,18 @@ export default {
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
 }
 
 /* Imagen final */
