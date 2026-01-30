@@ -93,7 +93,7 @@
         <iframe
           width="100%"
           height="450"
-          src="https://www.youtube.com/watch?v=OdnQZFKPcas"
+          src="https://www.youtube.com/embed/OdnQZFKPcas?start=3"
           title="Video de campaña"
           frameborder="0"
           referrerpolicy="strict-origin-when-cross-origin"
