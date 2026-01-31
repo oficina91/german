@@ -655,4 +655,4 @@ const gastoHormigaImg = '/img/gasto-hormiga-icon.png' // Necesitarás crear o ag
     font-size: 2rem;
   }
 }
-</style>
+</style> 
