@@ -56,8 +56,8 @@
           <img src="/img/German_Ricaurte-2.png" alt="Germán Ricaurte" class="feature-image">
         </div>
         <div class="section-text">
-          <img src="/img/Logo.png" class="feature-image-formula">
-          <h3 class="formula-subtitle">¿Quieres saber cuál es mi fórmula? </h3>
+          <img src="/img/logo.png" class="feature-image-formula">
+          <h3 class="formula-subtitle">¿Quieres saber cuál es mi fórmula? </h3>
           <p class="formula-question">Averígualo dándole click al botón de abajo.</p>
           <router-link to="/quien-soy" class="cta-button">Click aquí</router-link>
         </div>
@@ -67,27 +67,47 @@
     <!-- Lists Section -->
     <section class="lists-section">
       <div class="lists-container">
-        <div class="list-column">
-          <img src="/img/Logo.png" class="feature-image-formula">
+        <!-- Columna 1: Logo -->
+        <div class="list-column logo-column">
+          <router-link to="/">
+            <img src="/img/Logo.png" class="footer-logo" alt="Logo">
+          </router-link>
         </div>
-        <div class="list-column">
+        
+        <!-- Columna 2: Ideas -->
+        <div class="list-column ideas-column">
           <h3 class="list-title">Ideas</h3>
           <ul class="idea-list">
-            <li>Ideas de Gobierno</li>
-            <li>Ideas a la comunidad</li>
-            <li>Gastos Hormiga</li>
-            <li>¿Donde están?</li>
+            <li><router-link to="/mis-compromisos">Ideas de Gobierno</router-link></li>
+            <li><router-link to="/quien-soy">Ideas a la comunidad</router-link></li>
+            <li><router-link to="/gastos-hormiga">Gastos Hormiga</router-link></li>
+            <li><router-link to="/102-cagadas">¿Dónde están?</router-link></li>
           </ul>
         </div>
-        <div class="list-column">
+        
+        <!-- Columna 3: Links -->
+        <div class="list-column links-column">
           <h3 class="list-title">Links</h3>
           <ul class="link-list">
-            <li>Blog</li>
-            <li>Contacto</li>
-            <li>Trabaja con nosotros</li>
-            <li>Política de cookies</li>
+            <li><a href="https://linktr.ee/german_ricaurte" target="_blank" rel="noopener noreferrer">Blog</a></li>
+            <li><a href="https://germanricaurte.systeme.io/102nuevoliberalismo" target="_blank" rel="noopener noreferrer">Contacto</a></li>
+            <li><router-link to="/unete">Trabaja con nosotros</router-link></li>
+            <li><a href="#cookies" @click.prevent>Política de cookies</a></li>
           </ul>
         </div>
+      </div>
+      
+      <!-- Checkbox de términos abajo -->
+      <div class="terms-container">
+        <label class="terms-checkbox">
+          <input type="checkbox" id="terms-accept">
+          <span>
+            Al navegar en este sitio acepto los 
+            <a href="#terminos" @click.prevent>Términos y condiciones</a>, 
+            <a href="#cookies" @click.prevent>Política de cookies</a> y 
+            <a href="#privacidad" @click.prevent>Política de privacidad</a>
+          </span>
+        </label>
       </div>
     </section>
 
@@ -133,7 +153,7 @@ import { ref } from 'vue'
 // Imágenes desde la carpeta public/img
 const candidateImg = '/img/German_Ricaurte.png'
 const logoImg = '/img/Logo.png'
-const gastoHormigaImg = '/img/gasto-hormiga-icon.png' // Necesitarás crear o agregar esta imagen
+const gastoHormigaImg = '/img/gasto-hormiga-icon.png'
 </script>
 
 <style scoped>
@@ -170,11 +190,6 @@ const gastoHormigaImg = '/img/gasto-hormiga-icon.png' // Necesitarás crear o ag
   bottom: 0;
   background: rgba(254, 250, 226, 0.85);
   z-index: 1;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
 }
 
 .hero-content {
@@ -257,7 +272,7 @@ const gastoHormigaImg = '/img/gasto-hormiga-icon.png' // Necesitarás crear o ag
 .gasto-hormiga-section {
   background-color: #fefae2;
   background-image: url('/img/v602-nunoon-05-rippednotes.jpg');
-  background-size: 100% auto; /* Ancho 100%, alto automático */
+  background-size: 100% auto;
   background-position: center;
   background-repeat: no-repeat;
   padding: 80px 40px;
@@ -355,13 +370,6 @@ const gastoHormigaImg = '/img/gasto-hormiga-icon.png' // Necesitarás crear o ag
   object-fit: contain;
 }
 
-.feature-image-formula {
-  max-width: 80%;
-  align-items:  center;
-  height: auto;
-  margin-bottom: 20px;
-}
-
 /* Formula Section */
 .formula-section {
   background: #FEFAE2;
@@ -384,7 +392,7 @@ const gastoHormigaImg = '/img/gasto-hormiga-icon.png' // Necesitarás crear o ag
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  display: flex; /* Solo uno */
+  display: flex;
   align-items: center;
   justify-content: center;
   margin: 20px 0;
@@ -407,7 +415,6 @@ const gastoHormigaImg = '/img/gasto-hormiga-icon.png' // Necesitarás crear o ag
   font-family: Arial, sans-serif;
 }
 
-/* Agregar esto para centrar el contenido */
 .section-text {
   display: flex;
   flex-direction: column;
@@ -421,25 +428,47 @@ const gastoHormigaImg = '/img/gasto-hormiga-icon.png' // Necesitarás crear o ag
   margin-bottom: 10px;
 }
 
-/* Lists Section */
+/* Lists Section - CORREGIDO */
 .lists-section {
-  background: #FEFAE2;
-  padding: 60px 40px 100px;
+  background: #f5f5f5;
+  padding: 40px 40px 30px;
 }
 
 .lists-container {
   max-width: 1400px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
+  grid-template-columns: 200px 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+  margin-bottom: 30px;
+}
+
+.list-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-column {
+  justify-content: flex-start;
+}
+
+.footer-logo {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.footer-logo:hover {
+  transform: scale(1.05);
 }
 
 .list-title {
-  font-size: 2.5rem;
-  font-weight: 900;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 15px;
   color: #C01718;
-  margin-bottom: 25px;
   text-transform: uppercase;
 }
 
@@ -447,16 +476,15 @@ const gastoHormigaImg = '/img/gasto-hormiga-icon.png' // Necesitarás crear o ag
 .link-list {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .idea-list li,
 .link-list li {
-  font-size: 1.2rem;
-  margin-bottom: 15px;
-  padding-left: 25px;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  padding-left: 20px;
   position: relative;
-  font-family: Arial, sans-serif;
-  font-weight: normal;
 }
 
 .idea-list li::before,
@@ -466,7 +494,62 @@ const gastoHormigaImg = '/img/gasto-hormiga-icon.png' // Necesitarás crear o ag
   left: 0;
   color: #C01718;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.idea-list a,
+.link-list a {
+  color: #333;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-weight: normal;
+  transition: color 0.3s ease;
+}
+
+.idea-list a:hover,
+.link-list a:hover {
+  color: #C01718;
+  text-decoration: underline;
+}
+
+/* Términos y condiciones - Checkbox */
+.terms-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+}
+
+.terms-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.terms-checkbox input[type="checkbox"] {
+  margin-top: 4px;
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.terms-checkbox span {
+  line-height: 1.5;
+}
+
+.terms-checkbox a {
+  color: #C01718;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.terms-checkbox a:hover {
+  text-decoration: underline;
 }
 
 /* Social Bar */
@@ -511,8 +594,7 @@ const gastoHormigaImg = '/img/gasto-hormiga-icon.png' // Necesitarás crear o ag
 /* Responsive Design */
 @media (max-width: 1024px) {
   .hero-content,
-  .section-content,
-  .lists-container {
+  .section-content {
     grid-template-columns: 1fr;
     gap: 40px;
   }
@@ -544,6 +626,27 @@ const gastoHormigaImg = '/img/gasto-hormiga-icon.png' // Necesitarás crear o ag
   
   .formula-title {
     font-size: 3.5rem;
+  }
+  
+  .lists-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+  
+  .logo-column {
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .footer-logo {
+    max-width: 150px;
+  }
+  
+  .idea-list,
+  .link-list {
+    text-align: left;
+    display: inline-block;
   }
 }
 
@@ -603,6 +706,14 @@ const gastoHormigaImg = '/img/gasto-hormiga-icon.png' // Necesitarás crear o ag
     padding: 12px 35px;
   }
   
+  .lists-section {
+    padding: 30px 20px 25px;
+  }
+  
+  .terms-checkbox {
+    font-size: 0.85rem;
+  }
+  
   .social-bar {
     gap: 15px;
     padding: 10px 0;
@@ -652,10 +763,6 @@ const gastoHormigaImg = '/img/gasto-hormiga-icon.png' // Necesitarás crear o ag
   .section-description,
   .formula-question {
     font-size: 1rem;
-  }
-  
-  .list-title {
-    font-size: 2rem;
   }
 }
 </style>
