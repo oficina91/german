@@ -1,5 +1,11 @@
 <template>
   <header class="site-header" :class="{ 'scrolled': isScrolled, 'hidden': isHidden }">
+    <button class="hamburger-btn" @click="toggleMenu" :class="{ 'active': menuOpen }">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
     <div class="top-bar">
       <div class="logo-section">
         <h1 class="name">Germán Ricaurte</h1>
@@ -7,7 +13,7 @@
           <span>102</span>
         </div>
       </div>
-      
+
       <div class="subtitle">
         <span class="red">Cámara Bogotá</span>
         <span>NUEVO LIBERALISMO</span>
@@ -15,9 +21,7 @@
     </div>
 
     <div class="hero">
-      <!-- Aquí iría la foto del candidato (puedes ponerla después) -->
       <div class="candidate-photo-placeholder">
-        <!-- Temporal: puedes reemplazar esto por <img> cuando tengas la foto real -->
         <div class="photo-mock">Foto de Germán apuntando</div>
       </div>
 
@@ -28,7 +32,7 @@
       </div>
     </div>
 
-    <nav class="main-nav">
+    <nav class="main-nav desktop-nav">
       <router-link to="/">INICIO</router-link>
       <router-link to="/quien-soy">¿QUIÉN SOY?</router-link>
       <router-link to="/mis-compromisos">MIS COMPROMISOS</router-link>
@@ -37,13 +41,40 @@
       <router-link to="/gastos-hormiga">GASTOS HORMIGA</router-link>
     </nav>
 
-    <div class="social-links">
+    <div class="social-links desktop-social">
       <a href="#" target="_blank">WhatsApp</a>
       <a href="#" target="_blank">X</a>
       <a href="#" target="_blank">Instagram</a>
       <a href="#" target="_blank">YouTube</a>
       <a href="#" target="_blank">Facebook</a>
     </div>
+
+    <div class="sidebar-overlay" :class="{ 'active': menuOpen }" @click="closeMenu"></div>
+
+    <aside class="sidebar" :class="{ 'active': menuOpen }">
+      <div class="sidebar-header">
+        <h2>Menú</h2>
+        <button class="close-btn" @click="closeMenu">&times;</button>
+      </div>
+
+      <nav class="sidebar-nav">
+        <router-link to="/" @click="closeMenu">INICIO</router-link>
+        <router-link to="/quien-soy" @click="closeMenu">¿QUIÉN SOY?</router-link>
+        <router-link to="/mis-compromisos" @click="closeMenu">MIS COMPROMISOS</router-link>
+        <router-link to="/102-cagadas" @click="closeMenu">102 CAGADAS DEL PETRISMO</router-link>
+        <router-link to="/unete" @click="closeMenu">ÚNETE</router-link>
+        <router-link to="/gastos-hormiga" @click="closeMenu">GASTOS HORMIGA</router-link>
+      </nav>
+
+      <div class="sidebar-social">
+        <h3>Redes Sociales</h3>
+        <a href="#" target="_blank">WhatsApp</a>
+        <a href="#" target="_blank">X</a>
+        <a href="#" target="_blank">Instagram</a>
+        <a href="#" target="_blank">YouTube</a>
+        <a href="#" target="_blank">Facebook</a>
+      </div>
+    </aside>
   </header>
 </template>
 
@@ -54,7 +85,8 @@ export default {
       isScrolled: false,
       isHidden: false,
       lastScrollY: 0,
-      scrollThreshold: 10
+      scrollThreshold: 10,
+      menuOpen: false
     }
   },
   mounted() {
@@ -80,6 +112,18 @@ export default {
         }
         this.lastScrollY = currentScrollY;
       }
+    },
+    toggleMenu() {
+      this.menuOpen = !this.menuOpen;
+      if (this.menuOpen) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
+    },
+    closeMenu() {
+      this.menuOpen = false;
+      document.body.style.overflow = '';
     }
   }
 }
@@ -108,6 +152,173 @@ export default {
   background: linear-gradient(to bottom, rgba(255, 248, 225, 0.95), rgba(245, 232, 199, 0.95));
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.hamburger-btn {
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 2000;
+  background: #c00;
+  border: none;
+  border-radius: 8px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+  box-shadow: 0 4px 12px rgba(200, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+.hamburger-btn:hover {
+  background: #a00;
+  transform: scale(1.05);
+}
+
+.hamburger-btn span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background: white;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.hamburger-btn.active span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger-btn.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-btn.active span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1500;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.sidebar-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100vh;
+  background: linear-gradient(to bottom, #fff8e1, #f5e8c7);
+  z-index: 1600;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  overflow-y: auto;
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar.active {
+  transform: translateX(0);
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 2px solid #c00;
+  background: #fff;
+}
+
+.sidebar-header h2 {
+  margin: 0;
+  color: #c00;
+  font-size: 1.5rem;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  color: #c00;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.close-btn:hover {
+  transform: scale(1.2);
+  color: #a00;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+}
+
+.sidebar-nav a {
+  color: #c00;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 15px 20px;
+  border-bottom: 1px solid rgba(200, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.sidebar-nav a:hover,
+.sidebar-nav a.router-link-active {
+  background: rgba(200, 0, 0, 0.1);
+  padding-left: 30px;
+}
+
+.sidebar-social {
+  padding: 20px;
+  border-top: 2px solid #c00;
+  margin-top: 20px;
+}
+
+.sidebar-social h3 {
+  color: #c00;
+  margin: 0 0 15px;
+  font-size: 1.2rem;
+}
+
+.sidebar-social a {
+  display: block;
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px 0;
+  transition: all 0.2s ease;
+}
+
+.sidebar-social a:hover {
+  color: #c00;
+  padding-left: 10px;
 }
 
 .top-bar {
@@ -232,7 +443,20 @@ export default {
 }
 
 @media (max-width: 768px) {
-  .site-header { padding: 15px 0; }
+  .hamburger-btn {
+    display: flex;
+  }
+
+  .desktop-nav,
+  .desktop-social {
+    display: none;
+  }
+
+  .site-header {
+    padding: 15px 0;
+    padding-right: 80px;
+  }
+
   .name { font-size: 2.5rem; }
   .number-102 {
     font-size: 3.5rem;
@@ -242,25 +466,30 @@ export default {
     border: 6px solid white;
   }
   .subtitle { font-size: 1rem; }
-  .main-nav {
-    flex-direction: column;
-    gap: 10px;
-    font-size: 0.95rem;
-  }
-  .main-nav a {
-    padding: 10px 20px;
-    width: 100%;
-    text-align: center;
-  }
   .btn-large { font-size: 1.2rem; padding: 12px 28px; }
-  .social-links {
-    flex-wrap: wrap;
-    gap: 15px;
+
+  .sidebar {
+    width: 280px;
   }
-  .social-links a { font-size: 0.9rem; }
 }
 
 @media (max-width: 480px) {
+  .hamburger-btn {
+    top: 15px;
+    right: 15px;
+    width: 45px;
+    height: 45px;
+  }
+
+  .hamburger-btn span {
+    width: 24px;
+    height: 2.5px;
+  }
+
+  .site-header {
+    padding-right: 70px;
+  }
+
   .name { font-size: 2rem; }
   .number-102 {
     font-size: 3rem;
@@ -270,15 +499,32 @@ export default {
     border: 5px solid white;
   }
   .subtitle { font-size: 0.9rem; }
-  .main-nav { font-size: 0.85rem; gap: 8px; }
-  .main-nav a { padding: 8px 16px; }
   .btn-large {
     font-size: 1.1rem;
     padding: 10px 24px;
     bottom: 10px;
   }
   .candidate-photo-placeholder { height: 250px; }
-  .social-links { gap: 10px; }
-  .social-links a { font-size: 0.85rem; }
+
+  .sidebar {
+    width: 260px;
+  }
+
+  .sidebar-header h2 {
+    font-size: 1.3rem;
+  }
+
+  .sidebar-nav a {
+    font-size: 0.95rem;
+    padding: 12px 15px;
+  }
+
+  .sidebar-social h3 {
+    font-size: 1.1rem;
+  }
+
+  .sidebar-social a {
+    font-size: 0.9rem;
+  }
 }
 </style>
