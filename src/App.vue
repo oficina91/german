@@ -103,27 +103,36 @@ main {
 
 @media (max-width: 768px) {
   .nav {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0.5rem;
-    padding: 0.5rem;
+    position: static;
+    background: #111;
+    padding: 0;
+    transform: none !important;
+  }
+
+  .nav.hidden {
+    transform: none !important;
   }
 
   .nav a {
     text-align: center;
     font-size: 0.95rem;
     padding: 0.8rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   main {
-    padding-top: 350px;
+    padding-top: 0;
   }
 }
 
 @media (max-width: 480px) {
+  .nav {
+    position: static;
+  }
+
   .nav a {
-    font-size: 0.85rem;
-    padding: 0.7rem;
+    font-size: 0.9rem;
+    padding: 0.9rem;
   }
 }
 </style>

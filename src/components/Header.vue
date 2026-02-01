@@ -445,6 +445,7 @@ export default {
 @media (max-width: 768px) {
   .hamburger-btn {
     display: flex;
+    position: fixed;
   }
 
   .desktop-nav,
@@ -453,8 +454,13 @@ export default {
   }
 
   .site-header {
-    padding: 15px 0;
-    padding-right: 80px;
+    position: static;
+    padding: 15px 20px;
+    transform: none !important;
+  }
+
+  .site-header.hidden {
+    transform: none !important;
   }
 
   .name { font-size: 2.5rem; }
@@ -475,6 +481,7 @@ export default {
 
 @media (max-width: 480px) {
   .hamburger-btn {
+    position: fixed;
     top: 15px;
     right: 15px;
     width: 45px;
@@ -487,27 +494,30 @@ export default {
   }
 
   .site-header {
-    padding-right: 70px;
+    position: static;
+    padding: 15px 15px;
+    transform: none !important;
   }
 
-  .name { font-size: 2rem; }
+  .name { font-size: 1.8rem; }
   .number-102 {
-    font-size: 3rem;
-    width: 100px;
-    height: 100px;
-    margin: -40px 0 10px;
+    font-size: 2.8rem;
+    width: 90px;
+    height: 90px;
+    margin: -35px 0 10px;
     border: 5px solid white;
   }
-  .subtitle { font-size: 0.9rem; }
+  .subtitle { font-size: 0.85rem; }
   .btn-large {
-    font-size: 1.1rem;
-    padding: 10px 24px;
+    font-size: 1rem;
+    padding: 10px 20px;
     bottom: 10px;
   }
-  .candidate-photo-placeholder { height: 250px; }
+  .candidate-photo-placeholder { height: 220px; }
 
   .sidebar {
-    width: 260px;
+    width: 85%;
+    max-width: 300px;
   }
 
   .sidebar-header h2 {
