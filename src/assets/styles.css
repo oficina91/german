@@ -7,20 +7,6 @@ body {
   overflow-x: hidden;
 }
 
-header {
-  background: #f0e8d9;
-  padding: 20px;
-  text-align: center;
-  border-bottom: 2px solid #c00;
-}
-
-nav a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: #c00;
-  font-weight: bold;
-}
-
 .red { color: #c00; }
 
 .container {
@@ -64,7 +50,7 @@ input, textarea {
   box-sizing: border-box;
 }
 
-button {
+button:not(.hamburger-btn):not(.close-btn) {
   background: #c00;
   color: white;
   padding: 10px;
@@ -72,19 +58,9 @@ button {
   cursor: pointer;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .container {
     padding: 15px;
-  }
-
-  header {
-    padding: 15px;
-  }
-
-  nav a {
-    margin: 0 5px;
-    font-size: 0.9rem;
   }
 
   table {
@@ -99,15 +75,6 @@ button {
 @media (max-width: 480px) {
   .container {
     padding: 10px;
-  }
-
-  header {
-    padding: 10px;
-  }
-
-  nav a {
-    display: block;
-    margin: 5px 0;
   }
 
   table {
