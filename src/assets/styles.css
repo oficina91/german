@@ -1,12 +1,125 @@
-body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f5f5f5; color: #333; padding-top: 0; }
-header { background: #f0e8d9; padding: 20px; text-align: center; border-bottom: 2px solid #c00; }
-nav a { margin: 0 10px; text-decoration: none; color: #c00; font-weight: bold; }
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+  color: #333;
+  overflow-x: hidden;
+}
+
+header {
+  background: #f0e8d9;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 2px solid #c00;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #c00;
+  font-weight: bold;
+}
+
 .red { color: #c00; }
-.container { max-width: 1200px; margin: 0 auto; padding: 20px; }
-ul { list-style-type: disc; padding-left: 20px; }
-table { width: 100%; border-collapse: collapse; }
-th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-th { background: #c00; color: white; }
-form { max-width: 400px; margin: 0 auto; }
-input, textarea { width: 100%; margin: 10px 0; padding: 8px; }
-button { background: #c00; color: white; padding: 10px; border: none; cursor: pointer; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow-x: auto;
+  display: block;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background: #c00;
+  color: white;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+input, textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+button {
+  background: #c00;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  header {
+    padding: 15px;
+  }
+
+  nav a {
+    margin: 0 5px;
+    font-size: 0.9rem;
+  }
+
+  table {
+    font-size: 0.9rem;
+  }
+
+  th, td {
+    padding: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+  }
+
+  header {
+    padding: 10px;
+  }
+
+  nav a {
+    display: block;
+    margin: 5px 0;
+  }
+
+  table {
+    font-size: 0.8rem;
+  }
+
+  th, td {
+    padding: 4px;
+  }
+
+  form {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+}

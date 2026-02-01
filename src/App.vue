@@ -54,6 +54,8 @@ onBeforeUnmount(() => {
   right: 0;
   z-index: 1000;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1rem;
   padding: 1rem;
   background: #111;
@@ -68,14 +70,60 @@ onBeforeUnmount(() => {
 .nav a {
   color: white;
   text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background 0.2s ease;
+}
+
+.nav a:hover {
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .nav a.router-link-active {
   font-weight: bold;
+  background: rgba(255, 255, 255, 0.15);
   border-bottom: 2px solid white;
 }
 
 main {
   padding-top: 60px;
+}
+
+@media (max-width: 1024px) {
+  .nav {
+    gap: 0.8rem;
+    padding: 0.8rem;
+  }
+
+  .nav a {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .nav a {
+    text-align: center;
+    font-size: 0.95rem;
+    padding: 0.8rem;
+  }
+
+  main {
+    padding-top: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav a {
+    font-size: 0.85rem;
+    padding: 0.7rem;
+  }
 }
 </style>

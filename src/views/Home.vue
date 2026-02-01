@@ -506,6 +506,21 @@ const gastoHormigaImg = '/img/gasto-hormiga-icon.png' // Necesitarás crear o ag
 }
 
 /* Responsive Design */
+@media (max-width: 1200px) {
+  .hero-content,
+  .section-content {
+    gap: 50px;
+  }
+
+  .main-title {
+    font-size: 5rem;
+  }
+
+  .hero-text {
+    padding-left: 20px;
+  }
+}
+
 @media (max-width: 1024px) {
   .hero-content,
   .section-content,
@@ -513,34 +528,43 @@ const gastoHormigaImg = '/img/gasto-hormiga-icon.png' // Necesitarás crear o ag
     grid-template-columns: 1fr;
     gap: 40px;
   }
-  
+
   .section-content.reverse .section-image {
     order: 0;
   }
-  
+
   .main-title {
     font-size: 4rem;
   }
-  
+
+  .hero-text {
+    padding-left: 0;
+    text-align: center;
+  }
+
   .hero-text-description {
     font-size: 1.4rem;
   }
-  
+
   .hero-subtitle {
     font-size: 1.1rem;
   }
-  
+
   .hero-cta-button {
     font-size: 1.6rem;
     padding: 15px 40px;
   }
-  
+
   .section-title {
     font-size: 3rem;
   }
-  
+
   .formula-title {
     font-size: 3.5rem;
+  }
+
+  .lists-container {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -550,109 +574,162 @@ const gastoHormigaImg = '/img/gasto-hormiga-icon.png' // Necesitarás crear o ag
   .formula-section,
   .lists-section {
     padding: 40px 20px;
+    padding-bottom: 100px;
   }
-  
+
   .main-title {
     font-size: 3rem;
   }
-  
+
   .hero-text-description {
     font-size: 1.2rem;
   }
-  
+
   .hero-subtitle {
     font-size: 1rem;
   }
-  
+
   .hero-cta-button {
     font-size: 1.4rem;
     padding: 14px 35px;
   }
-  
+
   .logo-gastos-hormiga {
     max-width: 250px;
   }
-  
+
   .section-title {
     font-size: 2.5rem;
   }
-  
+
   .section-subtitle {
     font-size: 2rem;
   }
-  
+
+  .section-description {
+    font-size: 1rem;
+  }
+
   .formula-title {
     font-size: 2.5rem;
   }
-  
+
   .formula-subtitle {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
-  
+
+  .formula-question {
+    font-size: 1.1rem;
+  }
+
   .number-badge {
     font-size: 4rem;
     width: 100px;
     height: 100px;
   }
-  
+
   .cta-button {
     font-size: 1.2rem;
     padding: 12px 35px;
   }
-  
+
   .social-bar {
-    gap: 15px;
-    padding: 10px 0;
+    gap: 12px;
+    padding: 12px 10px;
+    flex-wrap: wrap;
   }
-  
+
   .social-icon {
-    width: 42px;
-    height: 42px;
+    width: 40px;
+    height: 40px;
   }
-  
+
   .icon-svg {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
+  }
+
+  .idea-list li,
+  .link-list li {
+    font-size: 1.1rem;
   }
 }
 
 @media (max-width: 480px) {
+  .hero-section,
+  .gasto-hormiga-section,
+  .formula-section,
+  .lists-section {
+    padding: 30px 15px;
+    padding-bottom: 120px;
+  }
+
   .main-title {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
+    line-height: 1;
   }
-  
+
   .hero-text-description {
-    font-size: 1.1rem;
-  }
-  
-  .hero-subtitle {
-    font-size: 0.95rem;
-  }
-  
-  .hero-cta-button {
-    font-size: 1.3rem;
-    padding: 12px 30px;
-  }
-  
-  .logo-gastos-hormiga {
-    max-width: 200px;
-  }
-  
-  .section-title {
-    font-size: 2rem;
-  }
-  
-  .section-subtitle {
-    font-size: 1.6rem;
-  }
-  
-  .section-description,
-  .formula-question {
     font-size: 1rem;
   }
-  
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .hero-cta-button {
+    font-size: 1.2rem;
+    padding: 12px 28px;
+  }
+
+  .logo-gastos-hormiga {
+    max-width: 180px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .section-subtitle {
+    font-size: 1.5rem;
+  }
+
+  .section-description,
+  .formula-question {
+    font-size: 0.95rem;
+  }
+
   .list-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+
+  .cta-button {
+    font-size: 1.1rem;
+    padding: 10px 28px;
+  }
+
+  .social-bar {
+    gap: 8px;
+    padding: 10px 5px;
+  }
+
+  .social-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .icon-svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .idea-list li,
+  .link-list li {
+    font-size: 1rem;
+  }
+
+  .feature-image {
+    max-height: 350px;
   }
 }
 </style> 
