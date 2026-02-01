@@ -1,5 +1,5 @@
 <template>
-  <header class="site-header" :class="{ 'scrolled': isScrolled }">
+  <header class="site-header" :class="{ 'scrolled': isScrolled, 'hidden': isHidden }">
     <div class="top-bar">
       <div class="logo-section">
         <h1 class="name">Germán Ricaurte</h1>
@@ -51,18 +51,35 @@
 export default {
   data() {
     return {
-      isScrolled: false
+      isScrolled: false,
+      isHidden: false,
+      lastScrollY: 0,
+      scrollThreshold: 10
     }
   },
   mounted() {
     window.addEventListener('scroll', this.handleScroll);
+    this.lastScrollY = window.scrollY;
   },
   beforeUnmount() {
     window.removeEventListener('scroll', this.handleScroll);
   },
   methods: {
     handleScroll() {
-      this.isScrolled = window.scrollY > 50;
+      const currentScrollY = window.scrollY;
+
+      this.isScrolled = currentScrollY > 50;
+
+      if (currentScrollY < 100) {
+        this.isHidden = false;
+      } else if (Math.abs(currentScrollY - this.lastScrollY) > this.scrollThreshold) {
+        if (currentScrollY > this.lastScrollY) {
+          this.isHidden = true;
+        } else {
+          this.isHidden = false;
+        }
+        this.lastScrollY = currentScrollY;
+      }
     }
   }
 }
@@ -70,14 +87,21 @@ export default {
 
 <style scoped>
 .site-header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
   background: linear-gradient(to bottom, #fff8e1, #f5e8c7);
   border-bottom: 4px solid #c00;
   text-align: center;
   padding: 20px 0;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+  transform: translateY(0);
+}
+
+.site-header.hidden {
+  transform: translateY(-100%);
 }
 
 .site-header.scrolled {

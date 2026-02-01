@@ -1,4 +1,4 @@
-body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f5f5f5; color: #333; }
+body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f5f5f5; color: #333; padding-top: 0; }
 header { background: #f0e8d9; padding: 20px; text-align: center; border-bottom: 2px solid #c00; }
 nav a { margin: 0 10px; text-decoration: none; color: #c00; font-weight: bold; }
 .red { color: #c00; }
