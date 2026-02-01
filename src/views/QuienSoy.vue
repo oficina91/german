@@ -94,8 +94,9 @@
           width="100%"
           height="100%"
           src="https://www.youtube.com/embed/OdnQZFKPcas?rel=0"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          title="Video propuesta Germán Ricaurte"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
           allowfullscreen
         ></iframe>
       </div>
@@ -484,6 +485,7 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
+  border: none;
   border-radius: 15px;
 }
 
