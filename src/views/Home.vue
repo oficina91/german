@@ -428,7 +428,7 @@ const gastoHormigaImg = '/img/gasto-hormiga-icon.png' // Necesitarás crear o ag
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: auto 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 60px;
   align-items: start;
 }
@@ -436,6 +436,8 @@ const gastoHormigaImg = '/img/gasto-hormiga-icon.png' // Necesitarás crear o ag
 .list-column {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .list-column:first-child {
@@ -460,6 +462,10 @@ const gastoHormigaImg = '/img/gasto-hormiga-icon.png' // Necesitarás crear o ag
 .link-list {
   list-style: none;
   padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .idea-list li,
@@ -470,6 +476,8 @@ const gastoHormigaImg = '/img/gasto-hormiga-icon.png' // Necesitarás crear o ag
   position: relative;
   font-family: Arial, sans-serif;
   font-weight: normal;
+  width: fit-content;
+  text-align: left;
 }
 
 .idea-list li a,
