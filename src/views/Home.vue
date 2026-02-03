@@ -425,11 +425,27 @@ const gastoHormigaImg = '/img/gasto-hormiga-icon.png' // Necesitarás crear o ag
 }
 
 .lists-container {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
+  grid-template-columns: auto 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.list-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.list-column:first-child {
+  justify-content: flex-start;
+  padding-top: 20px;
+}
+
+.list-column:first-child .feature-image-formula {
+  max-width: 150px;
+  width: 100%;
 }
 
 .list-title {
@@ -454,6 +470,18 @@ const gastoHormigaImg = '/img/gasto-hormiga-icon.png' // Necesitarás crear o ag
   position: relative;
   font-family: Arial, sans-serif;
   font-weight: normal;
+}
+
+.idea-list li a,
+.link-list li a {
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.idea-list li a:hover,
+.link-list li a:hover {
+  color: #C01718;
 }
 
 .idea-list li::before,
@@ -565,6 +593,17 @@ const gastoHormigaImg = '/img/gasto-hormiga-icon.png' // Necesitarás crear o ag
 
   .lists-container {
     grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .list-column:first-child {
+    text-align: center;
+    padding-top: 0;
+  }
+
+  .list-column:first-child .feature-image-formula {
+    max-width: 180px;
+    margin: 0 auto;
   }
 }
 
