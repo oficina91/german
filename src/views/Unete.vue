@@ -11,77 +11,10 @@
       <div class="form-section">
         <div class="form-card">
           <h2>Completa tus datos</h2>
-          <form @submit.prevent="submitForm" class="contact-form">
-            <div class="form-group">
-              <label for="name">
-                <span class="icon">👤</span>
-                Nombre completo
-              </label>
-              <input 
-                type="text" 
-                id="name"
-                placeholder="Ej: Juan Pérez" 
-                v-model="form.name" 
-                required
-                class="form-input"
-              >
-            </div>
-
-            <div class="form-group">
-              <label for="email">
-                <span class="icon">✉️</span>
-                Correo electrónico
-              </label>
-              <input 
-                type="email" 
-                id="email"
-                placeholder="ejemplo@correo.com" 
-                v-model="form.email" 
-                required
-                class="form-input"
-              >
-            </div>
-
-            <div class="form-group">
-              <label for="phone">
-                <span class="icon">📱</span>
-                Número de contacto
-              </label>
-              <input 
-                type="tel" 
-                id="phone"
-                placeholder="300 123 4567" 
-                v-model="form.phone" 
-                required
-                class="form-input"
-              >
-            </div>
-
-            <div class="form-group">
-              <label for="message">
-                <span class="icon">💬</span>
-                Déjanos tu mensaje (opcional)
-              </label>
-              <textarea 
-                id="message"
-                placeholder="Cuéntanos por qué quieres unirte o comparte tus ideas..." 
-                v-model="form.message"
-                rows="4"
-                class="form-textarea"
-              ></textarea>
-            </div>
-
-            <button type="submit" class="submit-button">
-              <span v-if="!isSubmitting">Enviar mi información</span>
-              <span v-else>Enviando...</span>
-              <span class="button-icon">→</span>
-            </button>
-          </form>
-
-          <div v-if="showSuccess" class="success-message">
-            <span class="success-icon">✓</span>
-            ¡Gracias por unirte! Pronto nos pondremos en contacto contigo.
-          </div>
+          <a href="https://germanricaurte.systeme.io/102nuevoliberalismo" target="_blank" rel="noopener noreferrer" class="submit-button">
+            <span>Enviar mi información</span>
+            <span class="button-icon">→</span>
+          </a>
         </div>
       </div>
 
@@ -158,37 +91,7 @@
 <script setup>
 import { ref } from 'vue'
 
-const form = ref({ 
-  name: '', 
-  email: '', 
-  phone: '', 
-  message: '' 
-})
-
-const isSubmitting = ref(false)
-const showSuccess = ref(false)
 const memberCount = ref(87)
-
-const submitForm = async () => {
-  isSubmitting.value = true
-  
-  // Simula el envío del formulario
-  setTimeout(() => {
-    isSubmitting.value = false
-    showSuccess.value = true
-    
-    // Limpia el formulario
-    form.value = { name: '', email: '', phone: '', message: '' }
-    
-    // Oculta el mensaje de éxito después de 5 segundos
-    setTimeout(() => {
-      showSuccess.value = false
-    }, 5000)
-
-    // Aquí puedes agregar tu lógica de envío real
-    console.log('Formulario enviado:', form.value)
-  }, 1500)
-}
 </script>
 
 <style scoped>
@@ -276,61 +179,24 @@ const submitForm = async () => {
   border-radius: 20px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
   border: 2px solid #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
 }
 
 .form-card h2 {
-  color: #ffffff;
+  color: #e53935;
   font-size: 2em;
   margin-bottom: 2rem;
   text-align: center;
 }
 
-.form-group {
-  margin-bottom: 1.5rem;
-}
-
-.form-group label {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  color: #333;
-  font-size: 1.05em;
-}
-
-.icon {
-  font-size: 1.2em;
-}
-
-.form-input,
-.form-textarea {
-  width: 100%;
-  padding: 1rem 1.2rem;
-  border: 2px solid #e0e0e0;
-  border-radius: 10px;
-  font-size: 1em;
-  font-family: inherit;
-  transition: all 0.3s ease;
-  background: #fafafa;
-}
-
-.form-input:focus,
-.form-textarea:focus {
-  outline: none;
-  border-color: #e53935;
-  background: white;
-  box-shadow: 0 0 0 3px rgba(229, 57, 53, 0.1);
-}
-
-.form-textarea {
-  resize: vertical;
-  min-height: 100px;
-}
 
 .submit-button {
-  width: 100%;
-  padding: 1.2rem 2rem;
+  width: auto;
+  padding: 1.2rem 3rem;
   background: linear-gradient(135deg, #e53935 0%, #c62828 100%);
   color: white;
   border: none;
@@ -339,11 +205,12 @@ const submitForm = async () => {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
+  text-decoration: none;
 }
 
 .submit-button:hover {
@@ -362,44 +229,6 @@ const submitForm = async () => {
 
 .submit-button:hover .button-icon {
   transform: translateX(5px);
-}
-
-.success-message {
-  margin-top: 1.5rem;
-  padding: 1.5rem;
-  background: linear-gradient(135deg, #4caf50 0%, #388e3c 100%);
-  color: white;
-  border-radius: 10px;
-  text-align: center;
-  font-weight: 600;
-  animation: slideDown 0.5s ease-out;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
-
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.success-icon {
-  font-size: 1.5em;
-  background: white;
-  color: #4caf50;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 /* Info Section */
@@ -489,7 +318,7 @@ const submitForm = async () => {
 }
 
 .benefits-card h3 {
-  color: #ffffff;
+  color: #e53935;
   font-size: 1.6em;
   margin-bottom: 1.5rem;
   text-align: center;
@@ -601,36 +430,20 @@ const submitForm = async () => {
   }
 
   .form-card {
-    background: #e53935;
-    border-color: #404040;
-  }
-
-  .form-group label {
-    color: rgba(255, 255, 255, 0.87);
-  }
-
-  .form-input,
-  .form-textarea {
-    background: #fefae2;
-    color: rgba(255, 255, 255, 0.87);
-    border-color: #404040;
-  }
-
-  .form-input:focus,
-  .form-textarea:focus {
-    background: #2a2a2a;
+    background: white;
+    border-color: #f5f5f5;
   }
 
   .benefits-card {
-    background: #e53935;
+    background: white;
   }
 
   .benefits-list strong {
-    color: rgba(255, 255, 255, 0.87);
+    color: #333;
   }
 
   .benefits-list p {
-    color: rgba(255, 255, 255, 0.7);
+    color: #666;
   }
 }
 </style>  
