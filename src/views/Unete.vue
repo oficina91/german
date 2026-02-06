@@ -11,7 +11,7 @@
       <div class="form-section">
         <div class="form-card">
           <h2>Completa tus datos</h2>
-          <a href="https://germanricaurte.systeme.io/102nuevoliberalismo" target="_blank" rel="noopener noreferrer" class="submit-button">
+          <a href="https://contacto.germanricaurte.com/contacto/" target="_blank" rel="noopener noreferrer" class="submit-button">
             <span>Enviar mi información</span>
             <span class="button-icon">→</span>
           </a>
