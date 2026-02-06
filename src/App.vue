@@ -6,7 +6,7 @@
     <RouterLink to="/mis-compromisos">Mis Compromisos</RouterLink>
     <RouterLink to="/quien-soy">Quién Soy</RouterLink>
     <RouterLink to="/unete">Únete</RouterLink>
-    <RouterLink to="/unete">Contacto</RouterLink>
+    <a href="https://contacto.germanricaurte.com/contacto/" target="_blank" rel="noopener noreferrer">Contacto</a>
   </nav>
 
   <main>
