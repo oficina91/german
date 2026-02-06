@@ -6,7 +6,7 @@
     <RouterLink to="/mis-compromisos">Mis Compromisos</RouterLink>
     <RouterLink to="/quien-soy">Quién Soy</RouterLink>
     <RouterLink to="/unete">Únete</RouterLink>
-    <RouterLink to="/unete">Únete</RouterLink>
+    <RouterLink to="/unete">Contacto</RouterLink>
   </nav>
 
   <main>

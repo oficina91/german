@@ -83,7 +83,7 @@
           <h3 class="list-title">Links</h3>
           <ul class="link-list">
             <li>Blog</li>
-  <a href="https://germanricaurte.systeme.io/102nuevoliberalismo" target="_blank" rel="noopener noreferrer">Contacto</a>          </ul>
+  <a href="https://contacto.germanricaurte.com/contacto/" target="_blank" rel="noopener noreferrer">Contacto</a>          </ul>
         </div>
       </div>
     </section>
