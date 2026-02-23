@@ -402,23 +402,28 @@ export default {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 30px;
   margin: 30px 0;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
 }
 
 .main-nav a {
-  color: #c00;
-  font-weight: bold;
+  color: #C01718;
+  font-weight: 900;
   text-decoration: none;
-  padding: 8px 16px;
-  border-radius: 6px;
-  transition: background 0.3s;
+  padding: 12px 24px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .main-nav a:hover,
 .main-nav a.router-link-active {
-  background: rgba(200,0,0,0.1);
+  background: #C01718;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(192, 23, 24, 0.4);
 }
 
 .social-links {
@@ -438,7 +443,7 @@ export default {
   .name { font-size: 3rem; }
   .number-102 { font-size: 4.5rem; width: 160px; height: 160px; margin: -70px 0 20px; }
   .subtitle { font-size: 1.2rem; }
-  .main-nav { font-size: 1rem; gap: 15px; }
+  .main-nav { font-size: 1.2rem; gap: 20px; }
   .btn-large { font-size: 1.4rem; padding: 14px 35px; }
 }
 
