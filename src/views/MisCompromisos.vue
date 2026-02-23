@@ -149,13 +149,6 @@
         </div>
       </div>
 
-      <!-- Footer CTA -->
-      <div class="footer-cta">
-        <div class="cta-badge">
-          <div class="pulse-dot"></div>
-          <p class="cta-text">Comprometido con el cambio que Colombia necesita</p>
-        </div>
-      </div>
     </div>
   </div>
 </template>
