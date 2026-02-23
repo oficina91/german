@@ -136,8 +136,8 @@ export default {
   left: 0;
   right: 0;
   z-index: 1000;
-  background: linear-gradient(to bottom, #fff8e1, #f5e8c7);
-  border-bottom: 4px solid #c00;
+  background: linear-gradient(to bottom, #C01718, #a01314);
+  border-bottom: 4px solid #8b0f10;
   text-align: center;
   padding: 20px 0;
   transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
@@ -149,9 +149,9 @@ export default {
 }
 
 .site-header.scrolled {
-  background: linear-gradient(to bottom, rgba(255, 248, 225, 0.95), rgba(245, 232, 199, 0.95));
+  background: linear-gradient(to bottom, rgba(192, 23, 24, 0.98), rgba(160, 19, 20, 0.98));
   backdrop-filter: blur(10px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .hamburger-btn {
@@ -332,12 +332,12 @@ export default {
   font-size: 3.5rem;
   font-weight: bold;
   margin: 0;
-  color: #000;
+  color: #ffffff;
 }
 
 .number-102 {
-  background: #c00;
-  color: white;
+  background: #ffffff;
+  color: #C01718;
   font-size: 5rem;
   font-weight: bold;
   width: 180px;
@@ -347,16 +347,17 @@ export default {
   align-items: center;
   justify-content: center;
   margin: -80px 0 20px;
-  border: 8px solid white;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  border: 8px solid #8b0f10;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
 }
 
 .subtitle {
   font-size: 1.4rem;
   margin-top: -10px;
+  color: #ffffff;
 }
 
-.red { color: #c00; font-weight: bold; }
+.red { color: #ffffff; font-weight: bold; }
 
 .hero {
   position: relative;
@@ -408,7 +409,7 @@ export default {
 }
 
 .main-nav a {
-  color: #C01718;
+  color: #ffffff;
   font-weight: 900;
   text-decoration: none;
   padding: 12px 24px;
@@ -420,10 +421,10 @@ export default {
 
 .main-nav a:hover,
 .main-nav a.router-link-active {
-  background: #C01718;
-  color: white;
+  background: #ffffff;
+  color: #C01718;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(192, 23, 24, 0.4);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.4);
 }
 
 .social-links {
@@ -434,9 +435,15 @@ export default {
 }
 
 .social-links a {
-  color: #333;
+  color: #ffffff;
   font-weight: bold;
   text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #ffdddd;
+  transform: scale(1.05);
 }
 
 @media (max-width: 1024px) {
