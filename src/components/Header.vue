@@ -417,14 +417,17 @@ export default {
   transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  background: #C01718;
+  border: 2px solid #ffffff;
 }
 
 .main-nav a:hover,
 .main-nav a.router-link-active {
-  background: #ffffff;
-  color: #C01718;
+  background: #C01718;
+  color: #ffffff;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(255, 255, 255, 0.4);
+  border-color: #ffdddd;
 }
 
 .social-links {
