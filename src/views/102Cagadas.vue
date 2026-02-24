@@ -26,22 +26,6 @@
       </div>
     </section>
 
-    
-    <section class="filter-section">
-      <div class="filter-content">
-        <div class="filter-flex">
-          <input
-            v-model="searchQuery"
-            type="text"
-            placeholder="Buscar..."
-            class="filter-input"
-          >
-          <span class="filter-counter">
-            {{ filteredCagadas.length }} de {{ cagadas.length }}
-          </span>
-        </div>
-      </div>
-    </section>
 
     
     <section class="cards-section">
@@ -85,8 +69,6 @@
 
 <script setup>
 import { ref, computed } from 'vue'
-
-const searchQuery = ref('')
 
 const cagadas = ref([
   {
@@ -602,13 +584,7 @@ const cagadas = ref([
 ])
 
 const filteredCagadas = computed(() => {
-  if (!searchQuery.value.trim()) return cagadas.value
-
-  const query = searchQuery.value.toLowerCase().trim()
-  return cagadas.value.filter(cagada =>
-    cagada.texto.toLowerCase().includes(query) ||
-    cagada.titulo.toLowerCase().includes(query)
-  )
+  return cagadas.value
 })
 </script>
 
@@ -709,52 +685,6 @@ const filteredCagadas = computed(() => {
   line-height: 1.6;
 }
 
-/* Filter Section */
-.filter-section {
-  background-color: #c01718;
-  border-bottom: 1px solid #3f3f46;
-  position: sticky;
-  top: 4rem;
-  z-index: 40;
-}
-
-.filter-content {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 1.5rem;
-}
-
-.filter-flex {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.filter-input {
-  flex: 1;
-  background-color: #000000;
-  border: 1px solid #3f3f46;
-  color: #ffffff;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  outline: none;
-  transition: border-color 0.2s;
-  font-size: 1rem;
-}
-
-.filter-input:focus {
-  border-color: #ef4444;
-}
-
-.filter-input::placeholder {
-  color: #6b7280;
-}
-
-.filter-counter {
-  color: #ffffff;
-  font-size: 0.875rem;
-  white-space: nowrap;
-}
 
 /* Cards Section */
 .cards-section {
@@ -867,15 +797,6 @@ const filteredCagadas = computed(() => {
   
   .nav-title {
     font-size: 1.25rem;
-  }
-  
-  .filter-flex {
-    flex-direction: column;
-    align-items: stretch;
-  }
-  
-  .filter-counter {
-    text-align: right;
   }
 }
 </style>
