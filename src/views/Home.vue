@@ -4,7 +4,12 @@
     <section class="hero-section">
       <div class="hero-content">
         <div class="hero-text">
-          <h1 class="main-title">Germán<br>Ricaurte</h1>
+          <div class="title-with-button">
+            <h1 class="main-title">Germán<br>Ricaurte</h1>
+            <a href="https://contacto.germanricaurte.com/contacto/" target="_blank" rel="noopener noreferrer" class="contact-button">
+              Contacto
+            </a>
+          </div>
           <p class="hero-text-description">
             Candidato a la Cámara de
             Representantes por Bogotá
@@ -189,13 +194,43 @@ const gastoHormigaImg = '/img/gasto-hormiga-icon.png' // Necesitarás crear o ag
   padding-left: 40px;
 }
 
+.title-with-button {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
 .main-title {
   font-size: 6rem;
   font-weight: 900;
   color: #C01718;
   line-height: 0.9;
-  margin-bottom: 20px;
+  margin-bottom: 0;
   text-transform: none;
+}
+
+.contact-button {
+  display: inline-block;
+  background: #C01718;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 900;
+  padding: 12px 35px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(192, 23, 24, 0.4);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  align-self: flex-end;
+  margin-bottom: 10px;
+}
+
+.contact-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(192, 23, 24, 0.6);
+  background: #a00;
 }
 
 .hero-text-description {
@@ -578,6 +613,10 @@ const gastoHormigaImg = '/img/gasto-hormiga-icon.png' // Necesitarás crear o ag
     text-align: center;
   }
 
+  .title-with-button {
+    justify-content: center;
+  }
+
   .hero-text-description {
     font-size: 1.4rem;
   }
@@ -626,6 +665,15 @@ const gastoHormigaImg = '/img/gasto-hormiga-icon.png' // Necesitarás crear o ag
 
   .main-title {
     font-size: 3rem;
+  }
+
+  .contact-button {
+    font-size: 1.1rem;
+    padding: 10px 28px;
+  }
+
+  .title-with-button {
+    gap: 15px;
   }
 
   .hero-text-description {
@@ -714,6 +762,17 @@ const gastoHormigaImg = '/img/gasto-hormiga-icon.png' // Necesitarás crear o ag
   .main-title {
     font-size: 2.2rem;
     line-height: 1;
+  }
+
+  .contact-button {
+    font-size: 1rem;
+    padding: 10px 24px;
+  }
+
+  .title-with-button {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
   }
 
   .hero-text-description {
