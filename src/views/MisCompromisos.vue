@@ -251,36 +251,36 @@ export default {
 /* Card Header */
 .card-header {
   position: relative;
-  height: 12rem;
+  height: 6rem;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background-color: #c01718;
+  background: linear-gradient(135deg, #c01718 0%, #8b0000 100%);
 }
 
 .gradient-yellow {
-  background-color: #c01718;
+  background: linear-gradient(135deg, #c01718 0%, #8b0000 100%);
 }
 
 .gradient-blue {
-  background-color: #c01718;
+  background: linear-gradient(135deg, #c01718 0%, #8b0000 100%);
 }
 
 .gradient-purple {
-  background-color: #c01718;
+  background: linear-gradient(135deg, #c01718 0%, #8b0000 100%);
 }
 
 .gradient-green {
-  background-color: #c01718;
+  background: linear-gradient(135deg, #c01718 0%, #8b0000 100%);
 }
 
 .gradient-red {
-  background-color: #c01718;
+  background: linear-gradient(135deg, #c01718 0%, #8b0000 100%);
 }
 
 .gradient-indigo {
-  background-color: #c01718;
+  background: linear-gradient(135deg, #c01718 0%, #8b0000 100%);
 }
 
 .overlay-gradient {
@@ -291,8 +291,8 @@ export default {
 .icon-circle {
   position: relative;
   z-index: 10;
-  width: 5rem;
-  height: 5rem;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -331,8 +331,8 @@ export default {
 }
 
 .icon-svg {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .icon-yellow { color: #ffffff; }
@@ -345,10 +345,10 @@ export default {
 /* Number Badge */
 .number-badge {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
-  width: 3rem;
-  height: 3rem;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
   background-color: #c01718;
   border-radius: 50%;
   display: flex;
@@ -357,7 +357,7 @@ export default {
   border: none;
   z-index: 10;
   font-weight: bold;
-  font-size: 1.125rem;
+  font-size: 0.75rem;
   color: #ffffff;
 }
 
@@ -393,13 +393,13 @@ export default {
 
 /* Card Body */
 .card-body {
-  padding: 1.5rem;
+  padding: 0.75rem;
 }
 
 .card-title {
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: bold;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
   color: #ffffff;
 }
 
@@ -412,12 +412,13 @@ export default {
 
 .card-text {
   color: #ffffff;
-  line-height: 1.6;
+  line-height: 1.5;
+  font-size: 0.875rem;
 }
 
 .text-highlight {
-  color: #eab308;
-  font-weight: 600;
+  color: #f5f5dc;
+  font-weight: bold;
 }
 
 /* Footer CTA */
