@@ -10,28 +10,8 @@
       </p>
     </div>
 
-    
-    <div class="search-section">
-      <div class="search-box">
-        <span class="search-icon">🔍</span>
-        <input 
-          type="text" 
-          v-model="searchTerm" 
-          placeholder="Buscar por palabra clave (ej: ministerio, bolos, millones...)"
-          class="search-input"
-        >
-        <button v-if="searchTerm" @click="searchTerm = ''" class="clear-button">✕</button>
-      </div>
-      <div class="filter-info">
-        <span v-if="filteredGastos.length !== totalDenuncias">
-          Mostrando {{ filteredGastos.length }} de {{ totalDenuncias }} denuncias
-        </span>
-        <span v-else>
-         
-        </span>
-      </div>
-    </div>
-    
+
+
     <div class="cards-container">
       <div 
         v-for="(item, index) in paginatedGastos" 
