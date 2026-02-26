@@ -144,6 +144,7 @@ export default {
   text-align: center;
   margin-bottom: 3rem;
   font-size: 3em;
+  font-weight: bold;
 }
 
 /* Hero Section */
