@@ -18,7 +18,7 @@
           <p class="hero-subtitle">
             Economista bogotano de 33 años, magíster en derecho, gobierno y gestión de la justicia, con 14 años de experiencia en el sector público y privado. Ha sido Edil de Chapinero, asesor del Concejo de Bogotá, de la Secretaría de Desarrollo Económico y del alcalde Carlos Fernando Galán. Es el fundador de la Unidad Contra el Gasto Hormiga como veeduría ciudadana.
           </p>
-          
+
           <router-link to="/quien-soy" class="hero-cta-button">
             ¿Quién Soy?
           </router-link>
@@ -49,46 +49,6 @@
         </div>
         <div class="section-image">
           <img src="/img/ollage.png" alt="Gasto Hormiga" class="feature-image">
-        </div>
-      </div>
-    </section>
-
-    <!-- Formula Section -->
-    <section class="formula-section">
-      <div class="section-content reverse">
-        
-        <div class="section-image">
-          <img src="/img/German_Ricaurte-2.png" alt="Germán Ricaurte" class="feature-image">
-        </div>
-        <div class="section-text">
-          <img src="/img/Logo.png" class="feature-image-formula">
-          <h3 class="formula-subtitle">¿Quieres saber cuál es mi fórmula? </h3>
-          <p class="formula-question">Averígualo dándole click al botón de abajo.</p>
-          <router-link to="/quien-soy" class="cta-button">Click aquí</router-link>
-        </div>
-      </div>
-    </section>
-
-    <!-- Lists Section -->
-    <section class="lists-section">
-      <div class="lists-container">
-        <div class="list-column">
-          <img src="/img/Logo.png" class="feature-image-formula">
-        </div>
-        <div class="list-column">
-          <h3 class="list-title">Ideas</h3>
-          <ul class="idea-list">
-        <li><router-link to="/mis-compromisos">Ideas de Gobierno</router-link></li>
-        <li><router-link to="/quien-soy">Ideas a la comunidad</router-link></li>
-        <li><router-link to="/gastos-hormiga">Gastos Hormiga</router-link></li>
-        <li><router-link to="/102-cagadas">¿Dónde están?</router-link></li>
-          </ul>
-        </div>
-        <div class="list-column">
-          <h3 class="list-title">Links</h3>
-          <ul class="link-list">
-            <li>Blog</li>
-  <a href="https://contacto.germanricaurte.com/contacto/" target="_blank" rel="noopener noreferrer">Contacto</a>          </ul>
         </div>
       </div>
     </section>
@@ -289,7 +249,7 @@ const gastoHormigaImg = '/img/gasto-hormiga-icon.png' // Necesitarás crear o ag
 .gasto-hormiga-section {
   background-color: #fefae2;
   background-image: url('/img/v602-nunoon-05-rippednotes.jpg');
-  background-size: 100% auto; /* Ancho 100%, alto automático */
+  background-size: 100% auto;
   background-position: center;
   background-repeat: no-repeat;
   padding: 80px 40px;
@@ -303,14 +263,6 @@ const gastoHormigaImg = '/img/gasto-hormiga-icon.png' // Necesitarás crear o ag
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 60px;
-}
-
-.section-content.reverse {
-  grid-template-columns: 1fr 1fr;
-}
-
-.section-content.reverse .section-image {
-  order: -1;
 }
 
 .logo-container {
@@ -328,14 +280,6 @@ const gastoHormigaImg = '/img/gasto-hormiga-icon.png' // Necesitarás crear o ag
   height: auto;
   margin-bottom: 25px;
   display: block;
-}
-
-.section-title {
-  font-size: 4rem;
-  font-weight: 900;
-  line-height: 1;
-  margin-bottom: 20px;
-  text-transform: uppercase;
 }
 
 .section-subtitle {
@@ -385,156 +329,6 @@ const gastoHormigaImg = '/img/gasto-hormiga-icon.png' // Necesitarás crear o ag
   height: auto;
   max-height: 500px;
   object-fit: contain;
-}
-
-.feature-image-formula {
-  max-width: 80%;
-  align-items:  center;
-  height: auto;
-  margin-bottom: 20px;
-}
-
-/* Formula Section */
-.formula-section {
-  background: #FEFAE2;
-  padding: 80px 40px;
-}
-
-.formula-title {
-  font-size: 5rem;
-  font-weight: 900;
-  color: #C01718;
-  line-height: 1;
-  margin-bottom: 20px;
-}
-
-.number-badge {
-  background: #C01718;
-  color: white;
-  font-size: 6rem;
-  font-weight: 900;
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  display: flex; /* Solo uno */
-  align-items: center;
-  justify-content: center;
-  margin: 20px 0;
-}
-
-.formula-subtitle {
-  font-size: 2rem;
-  font-weight: 900;
-  color: #000;
-  line-height: 1;
-  margin-bottom: 25px;
-}
-
-.formula-question {
-  font-size: 1.2rem;
-  color: #000;
-  margin-bottom: 30px;
-  line-height: 1.3;
-  font-weight: normal;
-  font-family: Arial, sans-serif;
-}
-
-/* Agregar esto para centrar el contenido */
-.section-text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 15px;
-}
-
-.feature-image-formula {
-  max-width: 200px;
-  margin-bottom: 10px;
-}
-
-/* Lists Section */
-.lists-section {
-  background: #FEFAE2;
-  padding: 60px 40px 100px;
-}
-
-.lists-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 60px;
-  align-items: start;
-}
-
-.list-column {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.list-column:first-child {
-  justify-content: flex-start;
-  padding-top: 20px;
-}
-
-.list-column:first-child .feature-image-formula {
-  max-width: 150px;
-  width: 100%;
-}
-
-.list-title {
-  font-size: 2.5rem;
-  font-weight: 900;
-  color: #C01718;
-  margin-bottom: 25px;
-  text-transform: uppercase;
-}
-
-.idea-list,
-.link-list {
-  list-style: none;
-  padding: 0;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.idea-list li,
-.link-list li {
-  font-size: 1.2rem;
-  margin-bottom: 15px;
-  padding-left: 25px;
-  position: relative;
-  font-family: Arial, sans-serif;
-  font-weight: normal;
-  width: fit-content;
-  text-align: left;
-}
-
-.idea-list li a,
-.link-list li a {
-  color: #000;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.idea-list li a:hover,
-.link-list li a:hover {
-  color: #C01718;
-}
-
-.idea-list li::before,
-.link-list li::before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  color: #C01718;
-  font-weight: bold;
-  font-size: 1.5rem;
 }
 
 /* Social Bar */
@@ -594,14 +388,9 @@ const gastoHormigaImg = '/img/gasto-hormiga-icon.png' // Necesitarás crear o ag
 
 @media (max-width: 1024px) {
   .hero-content,
-  .section-content,
-  .lists-container {
+  .section-content {
     grid-template-columns: 1fr;
     gap: 40px;
-  }
-
-  .section-content.reverse .section-image {
-    order: 0;
   }
 
   .main-title {
@@ -629,36 +418,11 @@ const gastoHormigaImg = '/img/gasto-hormiga-icon.png' // Necesitarás crear o ag
     font-size: 1.6rem;
     padding: 15px 40px;
   }
-
-  .section-title {
-    font-size: 3rem;
-  }
-
-  .formula-title {
-    font-size: 3.5rem;
-  }
-
-  .lists-container {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .list-column:first-child {
-    text-align: center;
-    padding-top: 0;
-  }
-
-  .list-column:first-child .feature-image-formula {
-    max-width: 180px;
-    margin: 0 auto;
-  }
 }
 
 @media (max-width: 768px) {
   .hero-section,
-  .gasto-hormiga-section,
-  .formula-section,
-  .lists-section {
+  .gasto-hormiga-section {
     padding: 40px 20px;
     padding-bottom: 100px;
   }
@@ -693,34 +457,12 @@ const gastoHormigaImg = '/img/gasto-hormiga-icon.png' // Necesitarás crear o ag
     max-width: 250px;
   }
 
-  .section-title {
-    font-size: 2.5rem;
-  }
-
   .section-subtitle {
     font-size: 2rem;
   }
 
   .section-description {
     font-size: 1rem;
-  }
-
-  .formula-title {
-    font-size: 2.5rem;
-  }
-
-  .formula-subtitle {
-    font-size: 2rem;
-  }
-
-  .formula-question {
-    font-size: 1.1rem;
-  }
-
-  .number-badge {
-    font-size: 4rem;
-    width: 100px;
-    height: 100px;
   }
 
   .cta-button {
@@ -743,18 +485,11 @@ const gastoHormigaImg = '/img/gasto-hormiga-icon.png' // Necesitarás crear o ag
     width: 18px;
     height: 18px;
   }
-
-  .idea-list li,
-  .link-list li {
-    font-size: 1.1rem;
-  }
 }
 
 @media (max-width: 480px) {
   .hero-section,
-  .gasto-hormiga-section,
-  .formula-section,
-  .lists-section {
+  .gasto-hormiga-section {
     padding: 30px 15px;
     padding-bottom: 120px;
   }
@@ -792,21 +527,12 @@ const gastoHormigaImg = '/img/gasto-hormiga-icon.png' // Necesitarás crear o ag
     max-width: 180px;
   }
 
-  .section-title {
-    font-size: 1.8rem;
-  }
-
   .section-subtitle {
     font-size: 1.5rem;
   }
 
-  .section-description,
-  .formula-question {
+  .section-description {
     font-size: 0.95rem;
-  }
-
-  .list-title {
-    font-size: 1.8rem;
   }
 
   .cta-button {
@@ -829,13 +555,8 @@ const gastoHormigaImg = '/img/gasto-hormiga-icon.png' // Necesitarás crear o ag
     height: 16px;
   }
 
-  .idea-list li,
-  .link-list li {
-    font-size: 1rem;
-  }
-
   .feature-image {
     max-height: 350px;
   }
 }
-</style> 
+</style>
