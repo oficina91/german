@@ -445,11 +445,18 @@ watch(searchTerm, resetPageOnSearch)
   font-weight: 600;
   font-size: 0.95em;
   transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(229, 57, 53, 0.3);
 }
 
 .twitter-link:hover {
   background: #c62828;
   transform: translateX(3px);
+  box-shadow: 0 8px 25px rgba(229, 57, 53, 0.6);
+}
+
+.twitter-link:active {
+  transform: scale(0.98);
+  box-shadow: 0 12px 35px rgba(229, 57, 53, 0.8);
 }
 
 .twitter-icon {
