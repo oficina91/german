@@ -85,7 +85,6 @@
     <!-- Imagen final -->
     <div class="final-image-section">
       <img src="/img/ferrocarril.jpg" alt="Ferrocarril" class="imagen-final">
-      <div class="image-caption">Comprometido con el desarrollo y la infraestructura de Colombia</div>
     </div>
 
     <footer class="page-footer">
@@ -404,13 +403,6 @@ export default {
   max-width: 1000px;
   border-radius: 15px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-}
-
-.image-caption {
-  margin-top: 1.5rem;
-  font-size: 1.2em;
-  color: #666;
-  font-style: italic;
 }
 
 /* Footer */
