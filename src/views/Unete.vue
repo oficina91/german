@@ -18,7 +18,7 @@
         </div>
       </div>
 
-      <!-- Sección de WhatsApp y beneficios -->
+      <!-- Sección de WhatsApp -->
       <div class="info-section">
         <div class="whatsapp-card">
           <div class="whatsapp-icon">❤️</div>
@@ -33,58 +33,9 @@
             Únete al grupo de WhatsApp
           </a>
         </div>
-
-        <div class="benefits-card">
-          <h3>¿Qué obtienes al unirte?</h3>
-          <ul class="benefits-list">
-            <li>
-              <span class="check-icon">✓</span>
-              <div>
-                <strong>Información exclusiva</strong>
-                <p>Entérate primero de nuestras propuestas y eventos</p>
-              </div>
-            </li>
-            <li>
-              <span class="check-icon">✓</span>
-              <div>
-                <strong>Participa activamente</strong>
-                <p>Tu opinión cuenta en la construcción de propuestas</p>
-              </div>
-            </li>
-            <li>
-              <span class="check-icon">✓</span>
-              <div>
-                <strong>Sé parte del cambio</strong>
-                <p>Contribuye a transformar nuestra sociedad</p>
-              </div>
-            </li>
-            <li>
-              <span class="check-icon">✓</span>
-              <div>
-                <strong>Networking</strong>
-                <p>Conecta con ciudadanos comprometidos</p>
-              </div>
-            </li>
-          </ul>
-        </div>
       </div>
     </div>
 
-    <!-- Sección de estadísticas -->
-    <div class="stats-section">
-      <div class="stat-item">
-        <div class="stat-number">{{ memberCount }}</div>
-        <div class="stat-label">Miembros activos</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number">32</div>
-        <div class="stat-label">Departamentos</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number">100%</div>
-        <div class="stat-label">Compromiso</div>
-      </div>
-    </div>
   </div>
 </template>
 
@@ -152,7 +103,7 @@ const memberCount = ref(87)
 /* Content wrapper */
 .content-wrapper {
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 3rem;
   margin-bottom: 4rem;
 }
@@ -309,88 +260,6 @@ const memberCount = ref(87)
   height: 100%;
 }
 
-/* Benefits Card */
-.benefits-card {
-  background: white;
-  padding: 2.5rem;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-.benefits-card h3 {
-  color: #e53935;
-  font-size: 1.6em;
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-
-.benefits-list {
-  list-style: none;
-  padding: 0;
-}
-
-.benefits-list li {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: flex-start;
-}
-
-.check-icon {
-  background: #e53935;
-  color: white;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  font-weight: bold;
-  font-size: 0.9em;
-}
-
-.benefits-list strong {
-  color: #333;
-  font-size: 1.1em;
-  display: block;
-  margin-bottom: 0.3rem;
-}
-
-.benefits-list p {
-  color: #666;
-  margin: 0;
-  font-size: 0.95em;
-  line-height: 1.5;
-}
-
-/* Stats Section */
-.stats-section {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  background: linear-gradient(135deg, #e53935 0%, #c62828 100%);
-  padding: 3rem;
-  border-radius: 20px;
-  box-shadow: 0 10px 40px rgba(229, 57, 53, 0.3);
-}
-
-.stat-item {
-  text-align: center;
-  color: white;
-}
-
-.stat-number {
-  font-size: 3.5em;
-  font-weight: 700;
-  line-height: 1;
-  margin-bottom: 0.5rem;
-}
-
-.stat-label {
-  font-size: 1.2em;
-  opacity: 0.95;
-}
 
 /* Responsive */
 @media (max-width: 968px) {
@@ -410,14 +279,6 @@ const memberCount = ref(87)
     font-size: 1.4em;
   }
 
-  .stats-section {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  .stat-number {
-    font-size: 2.5em;
-  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -434,16 +295,5 @@ const memberCount = ref(87)
     border-color: #f5f5f5;
   }
 
-  .benefits-card {
-    background: white;
-  }
-
-  .benefits-list strong {
-    color: #333;
-  }
-
-  .benefits-list p {
-    color: #666;
-  }
 }
 </style>  
