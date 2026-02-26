@@ -275,6 +275,7 @@ export default {
   margin-bottom: 1.5rem;
   position: relative;
   padding-bottom: 0.5rem;
+  font-weight: bold;
 }
 
 .section-title::after {
@@ -321,6 +322,7 @@ export default {
   color: #e53935;
   font-size: 1.8em;
   margin-bottom: 1.5rem;
+  font-weight: bold;
 }
 
 /* Sección de iniciativas */
@@ -366,6 +368,7 @@ export default {
   color: #e53935;
   font-size: 1.3em;
   margin-bottom: 1rem;
+  font-weight: bold;
 }
 
 /* Sección de determinación */
