@@ -405,7 +405,7 @@ export default {
   justify-content: center;
   gap: 30px;
   margin: 30px 0;
-  font-size: 1.4rem;
+  font-size: 1.7rem;
 }
 
 .main-nav a {
@@ -453,7 +453,7 @@ export default {
   .name { font-size: 3rem; }
   .number-102 { font-size: 4.5rem; width: 160px; height: 160px; margin: -70px 0 20px; }
   .subtitle { font-size: 1.2rem; }
-  .main-nav { font-size: 1.2rem; gap: 20px; }
+  .main-nav { font-size: 1.5rem; gap: 20px; }
   .btn-large { font-size: 1.4rem; padding: 14px 35px; }
 }
 
