@@ -4,8 +4,7 @@
     <div class="header-section">
       <img src="/img/logo_gastos_hormiga.png" alt="Germán Ricaurte" class="foto-principal" >
       <p class="description">
-        Desde la <strong>Unidad Contra el Gasto Hormiga</strong> documentamos el mal uso de recursos públicos.
-        Cada peso cuenta y debe ser invertido responsablemente.
+        Fundé la <strong>Unidad Contra el Gasto Hormiga</strong> para hacer veeduría y control del derroche de los recursos públicos que se han gastado en el actual gobierno.
       </p>
     </div>
 
