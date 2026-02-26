@@ -438,7 +438,7 @@ watch(searchTerm, resetPageOnSearch)
   align-items: center;
   gap: 0.7rem;
   padding: 0.8rem 1.5rem;
-  background: #000;
+  background: #e53935;
   color: white;
   text-decoration: none;
   border-radius: 25px;
@@ -448,13 +448,14 @@ watch(searchTerm, resetPageOnSearch)
 }
 
 .twitter-link:hover {
-  background: #1d9bf0;
+  background: #c62828;
   transform: translateX(3px);
 }
 
 .twitter-icon {
   width: 18px;
   height: 18px;
+  color: white;
 }
 
 .external-icon {
@@ -516,9 +517,9 @@ watch(searchTerm, resetPageOnSearch)
 
 .pagination-button {
   padding: 0.8rem 1.5rem;
-  background: white;
-  color: #e53935;
-  border: 2px solid #e53935;
+  background: #e53935;
+  color: white;
+  border: none;
   border-radius: 25px;
   font-weight: 600;
   cursor: pointer;
@@ -526,8 +527,7 @@ watch(searchTerm, resetPageOnSearch)
 }
 
 .pagination-button:hover:not(:disabled) {
-  background: #e53935;
-  color: white;
+  background: #c62828;
 }
 
 .pagination-button:disabled {
@@ -544,23 +544,21 @@ watch(searchTerm, resetPageOnSearch)
   width: 45px;
   height: 45px;
   border-radius: 50%;
-  border: 2px solid #e0e0e0;
-  background: white;
-  color: #666;
+  border: none;
+  background: #e53935;
+  color: white;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .page-number:hover {
-  border-color: #e53935;
-  color: #e53935;
+  background: #c62828;
 }
 
 .page-number.active {
-  background: #e53935;
+  background: #c62828;
   color: white;
-  border-color: #e53935;
 }
 
 /* CTA Section */
@@ -587,8 +585,8 @@ watch(searchTerm, resetPageOnSearch)
 .cta-button {
   display: inline-block;
   padding: 1.2rem 3rem;
-  background: white;
-  color: #e53935;
+  background: #e53935;
+  color: white;
   text-decoration: none;
   border-radius: 50px;
   font-weight: 700;
@@ -598,6 +596,7 @@ watch(searchTerm, resetPageOnSearch)
 }
 
 .cta-button:hover {
+  background: #c62828;
   transform: translateY(-3px);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
 }
