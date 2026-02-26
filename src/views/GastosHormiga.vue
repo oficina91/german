@@ -102,6 +102,7 @@ const itemsPerPage = 9
 const gastos = ref([
   { denuncia: 'Denuncié el contrato que costó 10mil millones de pesos para los abogados de Petro', publicacion: 'https://x.com/german_ricaurte/status/2010156848217809045?s=20', fecha: '11/01/2026' },
   { denuncia: 'Encontramos que la suma total de los contratos a nombre de familiares de Hollman Morris es de $732.282.324 millones de pesos.', publicacion: 'https://x.com/german_ricaurte/status/2026118812144210105?s=20', fecha: '26/02/2026' },
+  { denuncia: 'La familia Yannai Kadamani, Ministra de Cultura, está bien amañada en este gobierno con contratos firmados durante el límite de la ley de garantías por más de $900.000 millones de pesos.', publicacion: 'https://x.com/german_ricaurte/status/2022507893623271854?s=20', fecha: '15/02/2026' },
   { denuncia: 'Presidencia gastó 55 millones de pesos en 79 termos para el café a 700.000 cada uno.', publicacion: 'https://x.com/german_ricaurte/status/1957779914397990919?s=46&t=EXEdvC7XmsGZ8MLyf_b2Uw', fecha: '19/08/2025' },
   { denuncia: 'Ministerio de la Igualdad no ejecutó presupuesto para vulnerables pero gastó 20 millones en torneo de bolos.', publicacion: 'https://x.com/german_ricaurte/status/1965191642106990699?s=46&t=EXEdvC7XmsGZ8MLyf_b2Uw', fecha: '08/09/2025' },
   { denuncia: 'Contrato irregular a dedo de 30.000 millones en UNP para vinculación de escoltas; empresa con vínculos ilegales y representante capturado.', publicacion: 'https://x.com/german_ricaurte/status/1968649509631566170?s=20', fecha: '18/09/2025' },
