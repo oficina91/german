@@ -7,7 +7,7 @@
           <div class="title-with-button">
             <h1 class="main-title">Germán<br>Ricaurte</h1>
             <a href="https://contacto.germanricaurte.com/contacto/" target="_blank" rel="noopener noreferrer" class="contact-button">
-              Contacto
+              ÚNETE A LOS CIUDADANOS PREOCUPADOS
             </a>
           </div>
           <p class="hero-text-description">
