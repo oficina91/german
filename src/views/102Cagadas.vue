@@ -18,6 +18,7 @@
     <section class="hero-section">
       <div class="hero-content">
         <h1 class="hero-title">
+           <img src="https://png.pngtree.com/png-vector/20241107/ourlarge/pngtree-single-roll-of-toilet-paper-drawing-png-image_14277573.png" alt="Papel higiénico" class="toilet-paper-icon" />
            <span class="hero-title-red">102 Cagadas</span>
         </h1>
         <p class="hero-subtitle">
@@ -671,6 +672,16 @@ const filteredCagadas = computed(() => {
   font-weight: bold;
   margin-bottom: 1.5rem;
   line-height: 1.2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.toilet-paper-icon {
+  width: 4rem;
+  height: 4rem;
+  object-fit: contain;
 }
 
 .hero-title-red {
@@ -793,8 +804,15 @@ const filteredCagadas = computed(() => {
 @media (max-width: 768px) {
   .hero-title {
     font-size: 2.5rem;
+    flex-direction: column;
+    gap: 0.5rem;
   }
-  
+
+  .toilet-paper-icon {
+    width: 3rem;
+    height: 3rem;
+  }
+
   .nav-title {
     font-size: 1.25rem;
   }
