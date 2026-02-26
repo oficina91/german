@@ -100,7 +100,7 @@ const currentPage = ref(1)
 const itemsPerPage = 9
 
 const gastos = ref([
-
+  { denuncia: 'Denuncié el contrato que costó 10mil millones de pesos para los abogados de Petro', publicacion: 'https://x.com/german_ricaurte/status/2010156848217809045?s=20', fecha: '11/01/2026' },
   { denuncia: 'Presidencia gastó 55 millones de pesos en 79 termos para el café a 700.000 cada uno.', publicacion: 'https://x.com/german_ricaurte/status/1957779914397990919?s=46&t=EXEdvC7XmsGZ8MLyf_b2Uw', fecha: '19/08/2025' },
   { denuncia: 'Ministerio de la Igualdad no ejecutó presupuesto para vulnerables pero gastó 20 millones en torneo de bolos.', publicacion: 'https://x.com/german_ricaurte/status/1965191642106990699?s=46&t=EXEdvC7XmsGZ8MLyf_b2Uw', fecha: '08/09/2025' },
   { denuncia: 'Contrato irregular a dedo de 30.000 millones en UNP para vinculación de escoltas; empresa con vínculos ilegales y representante capturado.', publicacion: 'https://x.com/german_ricaurte/status/1968649509631566170?s=20', fecha: '18/09/2025' },
@@ -108,7 +108,6 @@ const gastos = ref([
   { denuncia: 'Universidad Nacional gastó 41 millones en entrenadores para equipos de tejo y rana de funcionarios.', publicacion: 'https://x.com/german_ricaurte/status/1986085103127212468?s=46&t=EXEdvC7XmsGZ8MLyf_b2Uw', fecha: '05/11/2025' },
   { denuncia: '12 mil millones para armar alojamientos a narcotraficantes de Gentil Duarte y disidencias Segunda Marquetalia.', publicacion: 'https://x.com/german_ricaurte/status/1994763190820114741?s=46&t=EXEdvC7XmsGZ8MLyf_b2Uw', fecha: '29/11/2025' },
   { denuncia: 'A pocas semanas de elecciones, Benedetti firma convenios por 198 mil millones con objetos gaseosos para indígenas.', publicacion: 'https://x.com/german_ricaurte/status/2006466817322266868?s=46&t=EXEdvC7XmsGZ8MLyf_b2Uw', fecha: '31/12/2025' },
-  { denuncia: '10.000 millones para firma de abogados defendiendo a Petro ante inclusión en lista Clinton.', publicacion: 'https://x.com/german_ricaurte/status/2010156848217809045?s=20', fecha: '11/01/2026' },
   { denuncia: 'Ministerio de Minas gastó 7 millones comprando ruanas para regalar a amigos.', publicacion: 'https://x.com/german_ricaurte/status/1943818529544847470?s=46&t=EXEdvC7XmsGZ8MLyf_b2Uw', fecha: '11/07/2025' },
   { denuncia: 'Presidente gastó 10 millones equipando peluquería del Palacio de Nariño (silla de 3.8 millones y esterilizador de 684.000).', publicacion: 'https://x.com/german_ricaurte/status/1957122978409243081?s=46&t=EXEdvC7XmsGZ8MLyf_b2Uw', fecha: '17/08/2025' },
   { denuncia: 'Presidencia contrató 6.800 millones en tiquetes aéreos en los últimos 11 meses del gobierno.', publicacion: 'https://x.com/german_ricaurte/status/1962880310418256031?s=46&t=EXEdvC7XmsGZ8MLyf_b2Uw', fecha: '02/09/2025' },
