@@ -206,7 +206,7 @@ export default {
 }
 
 .subtitle {
-  color: #9ca3af;
+  color: #ffffff;
   font-size: 1.25rem;
   max-width: 42rem;
   margin: 0 auto;
@@ -341,12 +341,12 @@ export default {
   height: 2.5rem;
 }
 
-.icon-yellow { color: #eab308; }
-.icon-blue { color: #3b82f6; }
-.icon-purple { color: #a855f7; }
-.icon-green { color: #22c55e; }
-.icon-red { color: #ef4444; }
-.icon-indigo { color: #6366f1; }
+.icon-yellow { color: #ffffff; }
+.icon-blue { color: #ffffff; }
+.icon-purple { color: #ffffff; }
+.icon-green { color: #ffffff; }
+.icon-red { color: #ffffff; }
+.icon-indigo { color: #ffffff; }
 
 /* Number Badge */
 .number-badge {
@@ -416,7 +416,7 @@ export default {
 .title-indigo { color: #6366f1; }
 
 .card-text {
-  color: #d1d5db;
+  color: #ffffff;
   line-height: 1.6;
 }
 
