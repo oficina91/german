@@ -3,9 +3,8 @@
     
     <div class="header-section">
       <img src="/img/logo_gastos_hormiga.png" alt="Germán Ricaurte" class="foto-principal" >
-      <p class="subtitle">Vigilancia ciudadana al gasto público</p>
       <p class="description">
-        Desde la <strong>Unidad Contra el Gasto Hormiga</strong> documentamos el mal uso de recursos públicos. 
+        Desde la <strong>Unidad Contra el Gasto Hormiga</strong> documentamos el mal uso de recursos públicos.
         Cada peso cuenta y debe ser invertido responsablemente.
       </p>
     </div>
