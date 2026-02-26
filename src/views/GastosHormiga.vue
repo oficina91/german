@@ -10,23 +10,6 @@
       </p>
     </div>
 
-    <div class="stats-section">
-      <div class="stat-card">
-        <div class="stat-icon">📊</div>
-        <div class="stat-number">{{ totalDenuncias }}</div>
-        <div class="stat-label">Denuncias registradas</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-icon">📅</div>
-        <div class="stat-number">{{ dateRange }}</div>
-        <div class="stat-label">Período de seguimiento</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-icon">👁️</div>
-        <div class="stat-number">Permanente</div>
-        <div class="stat-label">Vigilancia activa</div>
-      </div>
-    </div>
     
     <div class="search-section">
       <div class="search-box">
