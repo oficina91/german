@@ -256,36 +256,35 @@ export default {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  background-color: #c01718;
 }
 
 .gradient-yellow {
-  background: linear-gradient(to bottom right, rgba(234, 179, 8, 0.2), #000000);
+  background-color: #c01718;
 }
 
 .gradient-blue {
-  background: linear-gradient(to bottom right, rgba(59, 130, 246, 0.2), #000000);
+  background-color: #c01718;
 }
 
 .gradient-purple {
-  background: linear-gradient(to bottom right, rgba(168, 85, 247, 0.2), #000000);
+  background-color: #c01718;
 }
 
 .gradient-green {
-  background: linear-gradient(to bottom right, rgba(34, 197, 94, 0.2), #000000);
+  background-color: #c01718;
 }
 
 .gradient-red {
-  background: linear-gradient(to bottom right, rgba(239, 68, 68, 0.2), #000000);
+  background-color: #c01718;
 }
 
 .gradient-indigo {
-  background: linear-gradient(to bottom right, rgba(99, 102, 241, 0.2), #000000);
+  background-color: #c01718;
 }
 
 .overlay-gradient {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, #000000, rgba(0, 0, 0, 0.5), transparent);
+  display: none;
 }
 
 /* Icon Circle */
@@ -298,8 +297,9 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid;
+  border: none;
   transition: transform 0.3s ease;
+  background-color: #c01718;
 }
 
 .card-item:hover .icon-circle {
@@ -307,33 +307,27 @@ export default {
 }
 
 .circle-yellow {
-  background-color: rgba(234, 179, 8, 0.3);
-  border-color: rgba(234, 179, 8, 0.5);
+  background-color: #c01718;
 }
 
 .circle-blue {
-  background-color: rgba(59, 130, 246, 0.3);
-  border-color: rgba(59, 130, 246, 0.5);
+  background-color: #c01718;
 }
 
 .circle-purple {
-  background-color: rgba(168, 85, 247, 0.3);
-  border-color: rgba(168, 85, 247, 0.5);
+  background-color: #c01718;
 }
 
 .circle-green {
-  background-color: rgba(34, 197, 94, 0.3);
-  border-color: rgba(34, 197, 94, 0.5);
+  background-color: #c01718;
 }
 
 .circle-red {
-  background-color: rgba(239, 68, 68, 0.3);
-  border-color: rgba(239, 68, 68, 0.5);
+  background-color: #c01718;
 }
 
 .circle-indigo {
-  background-color: rgba(99, 102, 241, 0.3);
-  border-color: rgba(99, 102, 241, 0.5);
+  background-color: #c01718;
 }
 
 .icon-svg {
@@ -355,46 +349,46 @@ export default {
   right: 1rem;
   width: 3rem;
   height: 3rem;
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(10px);
+  background-color: #c01718;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid;
+  border: none;
   z-index: 10;
   font-weight: bold;
   font-size: 1.125rem;
+  color: #ffffff;
 }
 
 .badge-yellow {
-  color: #eab308;
-  border-color: rgba(234, 179, 8, 0.3);
+  background-color: #c01718;
+  color: #ffffff;
 }
 
 .badge-blue {
-  color: #3b82f6;
-  border-color: rgba(59, 130, 246, 0.3);
+  background-color: #c01718;
+  color: #ffffff;
 }
 
 .badge-purple {
-  color: #a855f7;
-  border-color: rgba(168, 85, 247, 0.3);
+  background-color: #c01718;
+  color: #ffffff;
 }
 
 .badge-green {
-  color: #22c55e;
-  border-color: rgba(34, 197, 94, 0.3);
+  background-color: #c01718;
+  color: #ffffff;
 }
 
 .badge-red {
-  color: #ef4444;
-  border-color: rgba(239, 68, 68, 0.3);
+  background-color: #c01718;
+  color: #ffffff;
 }
 
 .badge-indigo {
-  color: #6366f1;
-  border-color: rgba(99, 102, 241, 0.3);
+  background-color: #c01718;
+  color: #ffffff;
 }
 
 /* Card Body */
@@ -406,14 +400,15 @@ export default {
   font-size: 1.25rem;
   font-weight: bold;
   margin-bottom: 0.75rem;
+  color: #ffffff;
 }
 
-.title-yellow { color: #eab308; }
-.title-blue { color: #3b82f6; }
-.title-purple { color: #a855f7; }
-.title-green { color: #22c55e; }
-.title-red { color: #ef4444; }
-.title-indigo { color: #6366f1; }
+.title-yellow { color: #ffffff; }
+.title-blue { color: #ffffff; }
+.title-purple { color: #ffffff; }
+.title-green { color: #ffffff; }
+.title-red { color: #ffffff; }
+.title-indigo { color: #ffffff; }
 
 .card-text {
   color: #ffffff;
