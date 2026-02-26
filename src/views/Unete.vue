@@ -97,12 +97,12 @@ const memberCount = ref(87)
 
 /* WhatsApp Card */
 .whatsapp-card {
-  background: #e53935;
-  color: white;
+  background: #f5f1e8;
+  color: #333;
   padding: 3rem;
   border-radius: 20px;
   text-align: center;
-  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   max-width: 600px;
   width: 100%;
   animation: fadeIn 0.8s ease-out;
@@ -140,8 +140,8 @@ const memberCount = ref(87)
   align-items: center;
   gap: 1rem;
   padding: 1rem 2rem;
-  background: white;
-  color: #25D366;
+  background: #25D366;
+  color: white;
   text-decoration: none;
   border-radius: 50px;
   font-weight: 600;
