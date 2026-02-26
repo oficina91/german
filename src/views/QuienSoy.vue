@@ -452,11 +452,6 @@ p {
 }
 
 @media (prefers-color-scheme: dark) {
-  .experience-card {
-    background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
-    color: rgba(255, 255, 255, 0.87);
-  }
-
   .initiative-card {
     background: #2a2a2a;
     color: rgba(255, 255, 255, 0.87);
@@ -464,6 +459,15 @@ p {
 
   p {
     color: rgba(255, 255, 255, 0.87);
+  }
+
+  .experience-card {
+    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+  }
+
+  .experience-card h3,
+  .experience-card p {
+    color: #000000;
   }
 }
 </style>
