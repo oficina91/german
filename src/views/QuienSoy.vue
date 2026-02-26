@@ -65,26 +65,6 @@
       </div>
     </div>
 
-    <!-- Sección de determinación -->
-    <div class="determination-section">
-      <div class="quote-container">
-        <h2 class="section-title">¿Por qué insisto?</h2>
-        <div class="stats-row">
-          <div class="stat-box">
-            <span class="stat-number">2015</span>
-            <span class="stat-label">Concejo de Bogotá</span>
-            <span class="stat-votes">~7,500 votos</span>
-          </div>
-          <div class="stat-box">
-            <span class="stat-number">2022</span>
-            <span class="stat-label">Cámara de Representantes</span>
-            <span class="stat-votes">+12,700 votos</span>
-          </div>
-        </div>
-        <p class="quote-text">Porque cuento con un equipo de trabajo maravilloso, compuesto por personas trabajadoras, intachables, inspiradoras, con quienes hemos desarrollado nuestras campañas sin maquinarias, escuchando a la gente, difundiendo las propuestas en la calle y a través de las redes sociales.</p>
-        <p class="highlight-box">Estamos orgullosos porque hicimos las cosas bien y estamos convencidos de que se pueden ganar elecciones sin hacer trampa, sin engañar a la gente y sin comprar votos. <strong>En esta ocasión lo vamos a lograr.</strong></p>
-      </div>
-    </div>
 
     <!-- Video -->
     <div class="video-section">
@@ -130,7 +110,7 @@ export default {
         });
       }, { threshold: 0.1 });
 
-      const elements = document.querySelectorAll('.hero-section, .imagen-float-section, .card-section, .initiatives-section, .determination-section, .video-section, .final-image-section');
+      const elements = document.querySelectorAll('.hero-section, .imagen-float-section, .card-section, .initiatives-section, .video-section, .final-image-section');
       elements.forEach(el => observer.observe(el));
     }
   }
@@ -371,93 +351,6 @@ export default {
   font-weight: bold;
 }
 
-/* Sección de determinación */
-.determination-section {
-  background: linear-gradient(135deg, #e53935 0%, #c62828 100%);
-  color: white;
-  padding: 4rem 3rem;
-  border-radius: 20px;
-  margin: 5rem 0;
-  box-shadow: 0 10px 40px rgba(229, 57, 53, 0.3);
-  opacity: 0;
-  transform: scale(0.95);
-  transition: all 0.8s ease-out;
-}
-
-.determination-section.visible {
-  opacity: 1;
-  transform: scale(1);
-}
-
-.determination-section .section-title {
-  color: white;
-  text-align: center;
-  font-size: 2.5em;
-}
-
-.determination-section .section-title::after {
-  background: white;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.stats-row {
-  display: flex;
-  justify-content: center;
-  gap: 3rem;
-  margin: 3rem 0;
-  flex-wrap: wrap;
-}
-
-.stat-box {
-  background: rgba(255, 255, 255, 0.15);
-  padding: 2rem;
-  border-radius: 15px;
-  text-align: center;
-  backdrop-filter: blur(10px);
-  min-width: 200px;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.stat-number {
-  font-size: 2.5em;
-  font-weight: bold;
-  display: block;
-}
-
-.stat-label {
-  font-size: 1em;
-  opacity: 0.9;
-  display: block;
-}
-
-.stat-votes {
-  font-size: 1.3em;
-  font-weight: 600;
-  display: block;
-  margin-top: 0.5rem;
-}
-
-.quote-text {
-  font-size: 1.2em;
-  line-height: 1.8;
-  text-align: center;
-  margin: 2rem 0;
-}
-
-.highlight-box {
-  background: rgba(255, 255, 255, 0.2);
-  padding: 2rem;
-  border-radius: 10px;
-  font-size: 1.15em;
-  line-height: 1.8;
-  text-align: center;
-  backdrop-filter: blur(10px);
-  border: 2px solid rgba(255, 255, 255, 0.3);
-}
-
 /* Video */
 .video-section {
   margin: 5rem 0;
@@ -549,21 +442,12 @@ export default {
     grid-template-columns: 1fr;
   }
 
-  .stats-row {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
   .red {
     font-size: 2em;
   }
 
   .experience-card {
     padding: 2rem;
-  }
-
-  .determination-section {
-    padding: 3rem 2rem;
   }
 }
 
