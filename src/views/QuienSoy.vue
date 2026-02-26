@@ -28,8 +28,8 @@
     <div class="card-section">
       <div class="experience-card">
         <h3>Experiencia en el sector público</h3>
-        <p >Posteriormente trabajé como asesor de la Concejal Marisol Gómez, desarrollando debates sobre seguridad, infraestructura, valorización y manejo de la pandemia, destacándose la construcción de la ponencia del cupo de endeudamiento.</p>
-        <p>Más adelante, desde la administración distrital, en la Secretaría de Desarrollo Económico y la Secretaría General de Bogotá, lideré equipos territoriales para llevar programas de empleo y emprendimiento a las localidades y realicé seguimiento a grandes proyectos de infraestructura junto al alcalde Carlos Fernando Galán, fortaleciendo además el relacionamiento con gremios, comunidades y la comunicación con la ciudadanía en contextos de crisis.</p>
+        <p class="nnegro">Posteriormente trabajé como asesor de la Concejal Marisol Gómez, desarrollando debates sobre seguridad, infraestructura, valorización y manejo de la pandemia, destacándose la construcción de la ponencia del cupo de endeudamiento.</p>
+        <p class="nnegro">Más adelante, desde la administración distrital, en la Secretaría de Desarrollo Económico y la Secretaría General de Bogotá, lideré equipos territoriales para llevar programas de empleo y emprendimiento a las localidades y realicé seguimiento a grandes proyectos de infraestructura junto al alcalde Carlos Fernando Galán, fortaleciendo además el relacionamiento con gremios, comunidades y la comunicación con la ciudadanía en contextos de crisis.</p>
       </div>
     </div>
 
