@@ -9,9 +9,6 @@
     <div class="content-wrapper">
       <!-- Sección de WhatsApp -->
       <div class="whatsapp-card">
-        <div class="whatsapp-icon">❤️</div>
-        <h3>¡Únete a nuestra comunidad!</h3>
-        <p>Mantente informado de todas nuestras actividades y eventos.</p>
         <a href="https://www.whatsapp.com/channel/0029VbAEBMrGk1FnWNrD0y11" target="_blank" class="whatsapp-button">
           <span class="wa-icon">
             <svg viewBox="0 0 24 24" fill="currentColor">
@@ -20,6 +17,9 @@
           </span>
           Únete al grupo de WhatsApp
         </a>
+        <div class="whatsapp-icon">❤️</div>
+        <h3>¡Únete a nuestra comunidad!</h3>
+        <p>Mantente informado de todas nuestras actividades y eventos.</p>
       </div>
     </div>
 
@@ -121,6 +121,7 @@ const memberCount = ref(87)
 
 .whatsapp-icon {
   font-size: 4em;
+  margin-top: 2rem;
   margin-bottom: 1rem;
 }
 
